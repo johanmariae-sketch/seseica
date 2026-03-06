@@ -1,3 +1,4 @@
+import { I18nProvider } from "@/i18n"
 import Header from "@/components/ui/Header"
 import Hero from "@/components/ui/hero"
 import Historia from "@/components/sections/Historia"
@@ -8,15 +9,17 @@ import Footer from "@/components/sections/Footer"
 
 function App() {
   return (
-    <div className="min-h-screen w-full">
-      <Header />
-      <Hero />
-      <Historia />
-      <Productos />
-      <Marcas />
-      <Contacto />
-      <Footer />
-    </div>
+    <I18nProvider>
+      <div className="min-h-screen w-full">
+        <Header />
+        <Hero />
+        <Historia />
+        <Productos />
+        <Marcas />
+        <Contacto />
+        <Footer />
+      </div>
+    </I18nProvider>
   )
 }
 
