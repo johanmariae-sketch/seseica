@@ -1,21 +1,23 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { ExternalLink } from "lucide-react"
+import { useLang } from "@/i18n"
 
 const brands = [
-  { name: "John Crane", specialty: "Sellos mecánicos y sistemas de filtración", logo: "JC" },
-  { name: "Flowserve", specialty: "Bombas, sellos y válvulas industriales", logo: "FS" },
-  { name: "STENFLEX", specialty: "Compensadores de caucho y juntas de expansion", logo: "SF" },
-  { name: "Garlock", specialty: "Sellos, empaquetaduras y juntas", logo: "GK" },
-  { name: "Burgmann", specialty: "Sellos mecánicos de precisión", logo: "BG" },
-  { name: "Grundfos", specialty: "Bombas y soluciones de agua", logo: "GF" },
-  { name: "KSB", specialty: "Bombas centrífugas y válvulas", logo: "KS" },
-  { name: "Flexitallic", specialty: "Juntas espirometalicas y sellado", logo: "FX" },
+  { name: "John Crane", specialty: "Sellos mecánicos y sistemas de filtración", specialtyEn: "Mechanical seals and filtration systems", logo: "JC" },
+  { name: "Flowserve", specialty: "Bombas, sellos y válvulas industriales", specialtyEn: "Industrial pumps, seals and valves", logo: "FS" },
+  { name: "STENFLEX", specialty: "Compensadores de caucho y juntas de expansion", specialtyEn: "Rubber compensators and expansion joints", logo: "SF" },
+  { name: "Garlock", specialty: "Sellos, empaquetaduras y juntas", specialtyEn: "Seals, packings and gaskets", logo: "GK" },
+  { name: "Burgmann", specialty: "Sellos mecánicos de precisión", specialtyEn: "Precision mechanical seals", logo: "BG" },
+  { name: "Grundfos", specialty: "Bombas y soluciones de agua", specialtyEn: "Pumps and water solutions", logo: "GF" },
+  { name: "KSB", specialty: "Bombas centrífugas y válvulas", specialtyEn: "Centrifugal pumps and valves", logo: "KS" },
+  { name: "Flexitallic", specialty: "Juntas espirometalicas y sellado", specialtyEn: "Spiral wound gaskets and sealing", logo: "FX" },
 ]
 
 export default function Marcas() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const { lang, t } = useLang()
 
   return (
     <section id="marcas" className="py-24 px-6 md:px-12 bg-[#1e3a5f] relative overflow-hidden">
@@ -28,13 +30,12 @@ export default function Marcas() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-[#C41E24] font-semibold text-sm tracking-widest uppercase">Nuestras Marcas</span>
+          <span className="text-[#C41E24] font-semibold text-sm tracking-widest uppercase">{t("Nuestras Marcas", "Our Brands")}</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 font-heading">
-            Marcas de Clase Mundial
+            {t("Marcas de Clase Mundial", "World-Class Brands")}
           </h2>
           <p className="text-white/70 mt-4 max-w-2xl mx-auto text-lg">
-            Representamos y distribuimos las marcas más prestigiosas en sellado industrial
-            y transferencia de fluidos a nivel mundial.
+            {t("Representamos y distribuimos las marcas más prestigiosas en sellado industrial y transferencia de fluidos a nivel mundial.", "We represent and distribute the most prestigious brands in industrial sealing and fluid transfer worldwide.")}
           </p>
         </motion.div>
 
@@ -52,7 +53,7 @@ export default function Marcas() {
                 <span className="text-white font-bold text-lg font-heading">{brand.logo}</span>
               </div>
               <h3 className="text-white font-semibold text-sm font-heading">{brand.name}</h3>
-              <p className="text-white/50 text-xs mt-1 leading-relaxed">{brand.specialty}</p>
+              <p className="text-white/50 text-xs mt-1 leading-relaxed">{lang === "es" ? brand.specialty : brand.specialtyEn}</p>
               <ExternalLink className="w-3 h-3 text-white/20 group-hover:text-[#C41E24] transition-colors absolute top-4 right-4" />
             </motion.div>
           ))}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" fill="none">
+  <!-- S icon circle -->
+  <g transform="translate(0, 8)">
+    <circle cx="38" cy="42" r="36" stroke="#1e3a5f" stroke-width="3" fill="none"/>
+    <circle cx="38" cy="42" r="28" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+    <!-- Stylized S with arrow -->
+    <path d="M28 32 C28 26, 34 22, 42 22 C50 22, 54 26, 54 30 C54 36, 46 38, 38 40 C30 42, 22 44, 22 52 C22 58, 28 62, 36 62 C44 62, 50 58, 50 52" stroke="#1e3a5f" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Arrow on S -->
+    <path d="M48 48 L54 52 L48 56" stroke="#C41E24" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- SESEICA text -->
+  <text x="88" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="700" fill="#1e3a5f" letter-spacing="4">SESEICA</text>
+  <!-- Subtitle -->
+  <text x="88" y="80" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#1e3a5f" letter-spacing="0.5">Servicios de Sellado Industrial, SRL</text>
+</svg>

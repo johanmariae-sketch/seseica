@@ -233,7 +233,7 @@ export default function Productos() {
                     <ArrowRight className="w-4 h-4 rotate-180" />
                     {t("Volver a Productos", "Back to Products")}
                   </button>
-                  <img src="/logo-seseica.png" alt="SESEICA" className="h-8 w-auto" />
+                  <img src="/logo-seseica.svg" alt="SESEICA" className="h-8 w-auto" />
                 </div>
               </div>
 

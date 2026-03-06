@@ -35,7 +35,7 @@ export default function Header() {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          <img src="/logo-seseica.png" alt="SESEICA - Servicios de Sellado Industrial, SRL" className="h-12 md:h-14 w-auto" />
+          <img src="/logo-seseica.svg" alt="SESEICA - Servicios de Sellado Industrial, SRL" className="h-12 md:h-14 w-auto" />
         </motion.a>
 
         <nav className="hidden md:flex items-center space-x-1">
